@@ -1,0 +1,79 @@
+/* Style umum */
+body {
+    background-color: #FFF1DA;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Home Section */
+.index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Gambar utama - image 37 */
+.container img {
+    width: 100%; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+    height: auto;
+    max-width: 600px; /* Membatasi ukuran gambar maksimal */
+    margin: 0 auto;
+}
+
+
+/* Gaya tombol mulai */
+.btn-start {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-start img {
+    width: 50px; /* Sesuaikan ukuran tombol */
+    height: auto;
+    margin-top: -200px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn-start img:hover {
+    transform: scale(1.1);
+}
+
+.balloon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Balon tidak mengganggu interaksi dengan elemen lain */
+}
+
+.balloon {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background-image: url('image/balon.png'); /* Gambar balon */
+    background-size: cover;
+    animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-100vh) rotate(180deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
